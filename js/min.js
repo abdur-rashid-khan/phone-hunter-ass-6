@@ -20,7 +20,6 @@ searchBtn.addEventListener('click',()=>{
       document.getElementById('loader').style.display='block';
    }
 });
-
 // Display Data show 
 const getSearchValue=(data)=>{
       if(data.status===false){
@@ -58,7 +57,6 @@ const getSearchValue=(data)=>{
       document.getElementById('loader').style.display='none';
       }
 }
-
 const getPhoneId=(data)=>{
    const phoneIdUrl=`https://openapi.programming-hero.com/api/phone/${data}`;
    fetch(phoneIdUrl)
@@ -66,7 +64,6 @@ const getPhoneId=(data)=>{
    .then(GetId=>phoneId(GetId))
    document.getElementById('loader').style.display='block';
 };
-
 phoneId=(data)=>{
    document.getElementById('header-text').innerText="";
    let getbrand=data.data.brand;
