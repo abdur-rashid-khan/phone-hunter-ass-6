@@ -9,6 +9,7 @@ searchBtn.addEventListener('click',()=>{
    if(searchInputValue===''){
       document.getElementById('header-text').innerText="No Data Found";
       document.getElementById('post').textContent='';
+      document.getElementById('loader').style.display='none';
    }else{
       document.getElementById('header-text').innerText=`search result ${searchInputValue}`;
       let covertCapital=searchInputValue.charAt(0).toUpperCase() + searchInputValue.slice(1).toLowerCase();
@@ -25,6 +26,7 @@ const getSearchValue=(data)=>{
       if(data.status===false){
          document.getElementById('header-text').innerText="No Data Found";
          document.getElementById('post').textContent='';
+         document.getElementById('loader').style.display='none';
       }else{
          let getData=data.data;
          let post=document.getElementById('post');
