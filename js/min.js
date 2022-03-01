@@ -16,8 +16,8 @@ searchBtn.addEventListener('click',()=>{
       fetch(url)
       .then(res => res.json())
       .then(data=>getSearchValue(data));
+      document.getElementById('loader').style.display='block';
    }
-   
 });
 
 // Display Data show 
@@ -51,6 +51,7 @@ const getSearchValue=(data)=>{
             `;
             post.appendChild(col);
       });
+      document.getElementById('loader').style.display='none';
       }
 }
 
@@ -59,6 +60,7 @@ const getPhoneId=(data)=>{
    fetch(phoneIdUrl)
    .then(res=>res.json())
    .then(GetId=>phoneId(GetId))
+   document.getElementById('loader').style.display='block';
 };
 
 phoneId=(data)=>{
@@ -110,6 +112,7 @@ phoneId=(data)=>{
    </div>
    `;
    post.appendChild(ceratPost);
+   document.getElementById('loader').style.display='none';
    }else{
       const otherData='Not Found Other Data';
          // show singel mobile items
@@ -140,5 +143,6 @@ phoneId=(data)=>{
    </div>
    `;
    post.appendChild(ceratPost);
+   document.getElementById('loader').style.display='none';
    }
 }
