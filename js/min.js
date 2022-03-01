@@ -28,7 +28,9 @@ const getSearchValue=(data)=>{
          document.getElementById('post').textContent='';
          document.getElementById('loader').style.display='none';
       }else{
-         let getData=data.data;
+         //  20 phone display
+         let getData=data.data.slice(0,20);
+         // console.log(data.data.slice(0,20));
          let post=document.getElementById('post');
          post.textContent='';
          getData.forEach(element => {
