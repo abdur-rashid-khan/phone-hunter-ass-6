@@ -45,10 +45,9 @@ ul li{
 }
 #loader{
    position: fixed;
-   top: 40%;
-   left: 45%;
-   width: 150px;
-   height: 150px;
+   top: 44%;
+   width: 100px;
+   height: 100px;
    z-index: 1111;
    display: none;
 }
