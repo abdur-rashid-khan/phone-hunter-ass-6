@@ -43,6 +43,14 @@ nav{
 ul li{
    list-style: none;
 }
+#loader{
+   position: fixed;
+   top: 40%;
+   left: 45%;
+   width: 150px;
+   height: 150px;
+   z-index: 1111;
+}
 @media only screen and (max-width:767px){
    #imgSize{
       width: 60%;
